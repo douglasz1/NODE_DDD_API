@@ -55,15 +55,3 @@ describe("Auth Controller", () => {
             expect(res.status).to.have.been.calledWith(400);
         });
 
-        it("should return 200 and a user", async () => {
-            sandbox.spy(res, "status");
-            sandbox.spy(res, "json");
-
-            await sut.sigin(req, res);
-
-            expect(res.status).to.have.been.calledWith(200);
-            expect(res.json).to.have.been.calledWith(user);
-        });
-    });
-
-});
