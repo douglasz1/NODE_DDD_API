@@ -21,9 +21,4 @@ server.setConfig((application: express.Application) => {
     application.use(bodyParser.json());
 });
 
-const app = server.build();
 
-app.listen(5000, () => {
-    // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${5000}`);
-});
